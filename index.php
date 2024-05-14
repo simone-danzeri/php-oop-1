@@ -23,13 +23,22 @@ class Movie{
     return $this->title;
   }
 
+  // Funzione che mi ritorna i generi
+  public  function getGenres() {
+	$genres = '';
+	foreach ($this->genres as $genre) {
+		$genres .= $genre . ' ';
+	}
+	return $genres;
+  }
+
 }
 
 // Le singole istanze
-$back_to_the_future = new Movie('Back to the future', 'EN', 1985, 'Comedy', 'Universal Pictures');
-$braveheart = new Movie('Braveheart', 'EN', 1995, 'Action', '20th Century Studios');
-$the_wind_that_shakes_the_barley = new Movie('The wind that shakes the barley', 'EN', 2006, 'War', 'Fís Éireann / Screen Ireland');
-$the_shawshank_redemption = new Movie('The shawshank redemption', 'EN', 1994, 'Thriller', 'Warner Bros');
+$back_to_the_future = new Movie('Back to the future', 'EN', 1985, ['Comedy', 'Sci-fi'], 'Universal Pictures');
+$braveheart = new Movie('Braveheart', 'EN', 1995, ['Action', 'Historical'], '20th Century Studios');
+$the_wind_that_shakes_the_barley = new Movie('The wind that shakes the barley', 'EN', 2006, ['War', 'Dramatic'], 'Fís Éireann / Screen Ireland');
+$the_shawshank_redemption = new Movie('The shawshank redemption', 'EN', 1994, ['Thriller', 'Dramatic'], 'Warner Bros');
 
 $movies = [
   $back_to_the_future,
@@ -65,7 +74,7 @@ var_dump($the_shawshank_redemption); */
 					<li class="list-group-item"><?php echo $eachMovie->getTitle() ?></li>
 					<li class="list-group-item"><?php echo $eachMovie->original_language ?></li>
 					<li class="list-group-item"><?php echo $eachMovie->release_date ?></li>
-					<li class="list-group-item"><?php echo $eachMovie->genres ?></li>
+					<li class="list-group-item"><?php echo $eachMovie->getGenres() ?></li>
 					<li class="list-group-item"><?php echo $eachMovie->production_company ?></li>
 				</ul>
 		</div>
