@@ -10,7 +10,7 @@ class Movie{
   
   
     // COSTRUTTORE
-    public function __construct($_title, $_original_language, $_release_date, $_genres, $_production_company) {
+    public function __construct(string $_title, string $_original_language, int $_release_date, array $_genres, string $_production_company) {
       $this->title = $_title;
       $this->original_language = $_original_language;
       $this->release_date = $_release_date;
