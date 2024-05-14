@@ -37,11 +37,11 @@ var_dump($the_shawshank_redemption); */
 		<?php foreach($movies as $eachMovie) { ?>
 			<div class="card" style="width: 18rem;">
 				<ul class="list-group list-group-flush">
-					<li class="list-group-item"><?php echo $eachMovie->getTitle() ?></li>
-					<li class="list-group-item"><?php echo $eachMovie->original_language ?></li>
-					<li class="list-group-item"><?php echo $eachMovie->release_date ?></li>
-					<li class="list-group-item"><?php echo $eachMovie->getGenres() ?></li>
-					<li class="list-group-item"><?php echo $eachMovie->production_company ?></li>
+					<li class="list-group-item"><span class="fw-bold">Titolo: </span><?php echo $eachMovie->getTitle() ?></li>
+					<li class="list-group-item"><span class="fw-bold">Lingua originale: </span><?php echo $eachMovie->original_language ?></li>
+					<li class="list-group-item"><span class="fw-bold">Data di uscita: </span><?php echo $eachMovie->release_date ?></li>
+					<li class="list-group-item"><span class="fw-bold">Genere: </span><?php echo $eachMovie->getGenres() ?></li>
+					<li class="list-group-item"><span class="fw-bold">Casa di produzione: </span><?php echo $eachMovie->production_company ?></li>
 				</ul>
 		</div>
 		<?php } ?>
