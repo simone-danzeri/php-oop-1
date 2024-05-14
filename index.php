@@ -7,9 +7,14 @@ class Movie{
     public $release_date;
     public $genres;
     public $production_company;
-    public $cover;
-    public $casts;
+
 }
+
+// Le singole istanze
+$back_to_the_future = new Movie();
+$braveheart = new Movie();
+$the_wind_that_shakes_the_barley = new Movie();
+$the_shawshank_redemption = new Movie();
 ?>
 
 
