@@ -1,39 +1,32 @@
 <?php
 // Creo la classe Movie
 class Movie{
-    // CARATTERISTICHE della classe Movie (variabili di istanza)
-    public $title;
-    public $original_language;
-    public $release_date;
-    public $genres;
-    public $production_company;
+  // CARATTERISTICHE della classe Movie (variabili di istanza)
+  public $title;
+  public $original_language;
+  public $release_date;
+  public $genres;
+  public $production_company;
+
+
+  // COSTRUTTORE
+  public function __construct($_title, $_original_language, $_release_date, $_genres, $_production_company) {
+    $this->title = $_title;
+    $this->original_language = $_original_language;
+    $this->release_date = $_release_date;
+    $this->genres = $_genres;
+    $this->production_company = $_production_company;
+  }
 
 }
 
 // Le singole istanze
-$back_to_the_future = new Movie();
-$braveheart = new Movie();
-$the_wind_that_shakes_the_barley = new Movie();
-$the_shawshank_redemption = new Movie();
+$back_to_the_future = new Movie('Back to the future', 'EN', 1985, 'Comedy', 'Universal Pictures');
+$braveheart = new Movie('Braveheart', 'EN', 1995, 'Action', '20th Century Studios');
+$the_wind_that_shakes_the_barley = new Movie('The wind that shakes the barley', 'EN', 2006, 'War', 'Fís Éireann / Screen Ireland');
+$the_shawshank_redemption = new Movie('The shawshank redemption', 'EN', 1994, 'Thriller', 'Warner Bros');
+var_dump($back_to_the_future);
+var_dump($braveheart);
+var_dump($the_wind_that_shakes_the_barley);
+var_dump($the_shawshank_redemption);
 ?>
-
-
-<!-- HTML -->
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <!--Bootstrap link-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <!--Bootstrap link-->
-  <title>OOP 1</title>
-
-</head>
-<body>
-    
-<!--Bootstrap JS link-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<!--Bootstrap JS link-->
-</body>
-</html>
