@@ -1,3 +1,19 @@
+<?php
+// Creo la classe Movie
+class Movie{
+    // CARATTERISTICHE della classe Movie (variabili di istanza)
+    public $title;
+    public $original_language;
+    public $release_date;
+    public $genres;
+    public $production_company;
+    public $cover;
+    public $casts;
+}
+?>
+
+
+<!-- HTML -->
 <!DOCTYPE html>
 <html lang='en'>
 <head>
